@@ -3,8 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/public/styles/styles.css" media="screen" title="no title" charset="utf-8">
+
+    <!-- css links -->
+    <link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+    <link rel="stylesheet" type='text/css' href="../public/styles/styles.css" media="screen">
 
     <!-- Latest compiled and minified CSS & JS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -19,135 +21,143 @@
 </head>
 
 <body>
-    
-    <div class="container">
-        <div class="card">
-            <div class="card-body">
-                <h4 class="card-title">Mood Survey</h5>
-                <form id="moodSurvey">
-                    <!-- Negative Emotions-->
-                    <div class>
-                        <h5>Negative</h5>
-                        <div class="form-check" id="negative">
-                            <input class="form-check-input" type="checkbox" value="1" id="senseOfLossInput">
-                            <label class="form-check-label" for="senseOfLossInput">
-                            Sense of Loss
-                            </label>
-                            <br>
-                            <input class="form-check-input" type="checkbox" value="1" id="ashamedInput">
-                            <label class="form-check-label" for="ashamedInput">
-                            Ashamed
-                            </label>
-                            <br>
-                            <input class="form-check-input" type="checkbox" value="1" id="badInput">
-                            <label class="form-check-label" for="badInput">
-                            Bad
-                            </label>
-                            <br>
-                            <input class="form-check-input" type="checkbox" value="1" id="despicableInput">
-                            <label class="form-check-label" for="despicableInput">
-                            Despicable
-                            </label>
-                            <br>
-                            <input class="form-check-input" type="checkbox" value="1" id="disappointedInput">
-                            <label class="form-check-label" for="disappointedInput">
-                            Disappointed
-                            </label>
-                            <br>
-                            <input class="form-check-input" type="checkbox" value="1" id="discouragedInput">
-                            <label class="form-check-label" for="discouragedInput">
-                            Discouraged
-                            </label>
-                            <br>
-                            <input class="form-check-input" type="checkbox" value="1" id="dissatisfiedInput">
-                            <label class="form-check-label" for="dissatisfiedInput">
-                            Dissatisfied
-                            </label>
-                            <br>
-                            <input class="form-check-input" type="checkbox" value="1" id="guiltyInput">
-                            <label class="form-check-label" for="guiltyInput">
-                            Guilty
-                            </label>
-                            <br>
-                            <input class="form-check-input" type="checkbox" value="1" id="powerlessInput">
-                            <label class="form-check-label" for="powerlessInput">
-                            Powerless
-                            </label>
-                            <br>
-                            <input class="form-check-input" type="checkbox" value="1" id="sulkyInput">
-                            <label class="form-check-label" for="sulkyInput">
-                            Sulky
-                            </label>
-                            <br>
+    <!--survey form-->
+    <section id="cover" class="min-vh-100">
+        <div id="cover-caption">
+            <div class="container-fluid">
+                <div class="row text-white">
+                    <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4">
+                        <img class="center" src="../public/assets/images/laughing.svg" height="87" width="100" />
+                        <h1 class="display-4 py-2 text-truncate">Mood Survey</h1>
+                        <div class="px-2">
+                            <form id="moodSurvey" class="justify-content-center">
+                                <!-- Negative Emotions-->
+                                <div class>
+                                    <h5>Negative</h5>
+                                    <div class="form-check" id="negative">
+                                        <input class="form-check-input" type="checkbox" value="1" id="senseOfLossInput">
+                                        <label class="form-check-label" for="senseOfLossInput">
+                                            Sense of Loss
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input" type="checkbox" value="1" id="ashamedInput">
+                                        <label class="form-check-label" for="ashamedInput">
+                                            Ashamed
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input" type="checkbox" value="1" id="badInput">
+                                        <label class="form-check-label" for="badInput">
+                                            Bad
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input" type="checkbox" value="1" id="despicableInput">
+                                        <label class="form-check-label" for="despicableInput">
+                                            Despicable
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input" type="checkbox" value="1"
+                                            id="disappointedInput">
+                                        <label class="form-check-label" for="disappointedInput">
+                                            Disappointed
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input" type="checkbox" value="1" id="discouragedInput">
+                                        <label class="form-check-label" for="discouragedInput">
+                                            Discouraged
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input" type="checkbox" value="1"
+                                            id="dissatisfiedInput">
+                                        <label class="form-check-label" for="dissatisfiedInput">
+                                            Dissatisfied
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input" type="checkbox" value="1" id="guiltyInput">
+                                        <label class="form-check-label" for="guiltyInput">
+                                            Guilty
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input" type="checkbox" value="1" id="powerlessInput">
+                                        <label class="form-check-label" for="powerlessInput">
+                                            Powerless
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input" type="checkbox" value="1" id="sulkyInput">
+                                        <label class="form-check-label" for="sulkyInput">
+                                            Sulky
+                                        </label>
+                                        <br>
+                                    </div>
+                                </div>
+                                <br>
+                                <!-- Positive Emotions -->
+                                <div class>
+                                    <h5>Positive</h5>
+                                    <div class="form-check" id="positive">
+                                        <input class="form-check-input" type="checkbox" value="" id="boldInput">
+                                        <label class="form-check-label" for="boldInput">
+                                            Bold
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input" type="checkbox" value="" id="braveInput">
+                                        <label class="form-check-label" for="braveInput">
+                                            Brave
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input" type="checkbox" value="" id="confidentInput">
+                                        <label class="form-check-label" for="confidentInput">
+                                            Confident
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input" type="checkbox" value="" id="determinedInput">
+                                        <label class="form-check-label" for="determinedInput">
+                                            Determined
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input" type="checkbox" value="" id="eagerInput">
+                                        <label class="form-check-label" for="eagerInput">
+                                            Eager
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input" type="checkbox" value="" id="enthusiasticInput">
+                                        <label class="form-check-label" for="enthusiasticInput">
+                                            Enthusiastic
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input" type="checkbox" value="" id="hopefulInput">
+                                        <label class="form-check-label" for="hopefulInput">
+                                            Hopeful
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input" type="checkbox" value="" id="inspiredInput">
+                                        <label class="form-check-label" for="inspiredInput">
+                                            Inspired
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input" type="checkbox" value="" id="optimisticInput">
+                                        <label class="form-check-label" for="optimisticInput">
+                                            Optimistic
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input" type="checkbox" value="" id="reenforcedInput">
+                                        <label class="form-check-label" for="reenforcedInput">
+                                            Re-Enforced
+                                        </label>
+                                        <br>
+                                    </div>
+                                </div>
+                                <button type="submit" id="submit" class="btn btn-primary mt-3">Submit
+                                    Survey</button>
+                            </form>
                         </div>
                     </div>
-                    <br>
-                    <!-- Positive Emotions -->
-                    <div class>
-                        <h5>Positive</h5>
-                        <div class="form-check" id="positive">
-                            <input class="form-check-input" type="checkbox" value="" id="boldInput">
-                            <label class="form-check-label" for="boldInput">
-                            Bold
-                            </label>
-                            <br>
-                            <input class="form-check-input" type="checkbox" value="" id="braveInput">
-                            <label class="form-check-label" for="braveInput">
-                            Brave
-                            </label>
-                            <br>
-                            <input class="form-check-input" type="checkbox" value="" id="confidentInput">
-                            <label class="form-check-label" for="confidentInput">
-                            Confident
-                            </label>
-                            <br>
-                            <input class="form-check-input" type="checkbox" value="" id="determinedInput">
-                            <label class="form-check-label" for="determinedInput">
-                            Determined
-                            </label>
-                            <br>
-                            <input class="form-check-input" type="checkbox" value="" id="eagerInput">
-                            <label class="form-check-label" for="eagerInput">
-                            Eager
-                            </label>
-                            <br>
-                            <input class="form-check-input" type="checkbox" value="" id="enthusiasticInput">
-                            <label class="form-check-label" for="enthusiasticInput">
-                            Enthusiastic
-                            </label>
-                            <br>
-                            <input class="form-check-input" type="checkbox" value="" id="hopefulInput">
-                            <label class="form-check-label" for="hopefulInput">
-                            Hopeful
-                            </label>
-                            <br>
-                            <input class="form-check-input" type="checkbox" value="" id="inspiredInput">
-                            <label class="form-check-label" for="inspiredInput">
-                            Inspired
-                            </label>
-                            <br>
-                            <input class="form-check-input" type="checkbox" value="" id="optimisticInput">
-                            <label class="form-check-label" for="optimisticInput">
-                            Optimistic
-                            </label>
-                            <br>
-                            <input class="form-check-input" type="checkbox" value="" id="reenforcedInput">
-                            <label class="form-check-label" for="reenforcedInput">
-                            Re-Enforced
-                            </label>
-                            <br>
-                        </div>
-                    </div>
-                    <button type="submit" id="submit" class="btn btn-primary mt-3">Submit Survey</button>
-                </form>  
-            </div>
-        </div>
-    </div>
+                </div>
+    </section>
+
+    <!-- javascript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../public/js/survey.js"  type="text/javascript"></script>
+
 </body>
 
 </html>
-
-
-  
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="../public/js/survey.js"></script>

@@ -11,37 +11,29 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [1]
+        len: [1, 255]
       }
     },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [1]
+        len: [1, 255]
       }
     },
     password: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [1]
+        len: [1, 255]
       }
     }
   });
 
-<<<<<<< HEAD
   User.associate = function(models) {
     User.hasMany(models.Score, {
       onDelete: "cascade"
     });
   };
-=======
-  //User.associate = function(models) {
-  //  User.hasMany(models.Post, {
-  //    onDelete: "cascade"
-  //  });
-  //};
->>>>>>> origin/master
   return User;
 };
