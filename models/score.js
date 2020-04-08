@@ -1,3 +1,7 @@
+var db = require("../models");
+var express = require("express");
+var app = express();
+
 module.exports = function(sequelize, DataTypes) {
   var Score = sequelize.define("Score", {
     UnpleasantScore: {
@@ -23,14 +27,14 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
-  Score.associate = function(models) {
+  //Score.associate = function(models) {
     // We're saying that a Score should belong to an User
     // A Score can't be created without an User due to the foreign key constraint
-    Score.belongsTo(models.User, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
-  };
+  //  Score.belongsTo(models.User, {
+  //    foreignKey: {
+  //      allowNull: false
+  //    }
+  //  });
+  //};
   return Score;
 };

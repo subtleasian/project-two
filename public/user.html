@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/styles/styles.css" media="screen" title="no title" charset="utf-8">
+
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Chosen -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+
+    <title>Create New Account</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!--Form to take in profile picture, name, email, password-->
+        <form>
+            <!-- Profile Picture -->
+            <div class="form-group">
+                <label for="inputProfile">Choose a Profile Picture</label>
+                <input type="file" class="form-control-file" id="inputProfile">
+              </div>
+            <!-- Name -->
+            <div class="form-group">
+                <label for="inputName">Full Name</label>
+                <textarea class="form-control" id="inputName" rows="1"></textarea>
+            </div>
+            <!-- Email -->
+            <div class="form-group">
+              <label for="inputEmail">Email address</label>
+              <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+            <!-- Password -->
+            <div class="form-group">
+              <label for="inputPassword">Password</label>
+              <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+              <small id="passwordHelp" class="form-text text-muted">We'll never share your password with anyone else</small>
+            </div>
+            <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+</body>
+
+</html>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="../public/js/user.js"></script>
