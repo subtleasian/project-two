@@ -1,5 +1,12 @@
 module.exports = function(sequelize, DataTypes) {
   var User = sequelize.define("User", {
+    picture: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
+    },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -23,10 +30,10 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
-  User.associate = function(models) {
-    User.hasMany(models.Post, {
-      onDelete: "cascade"
-    });
-  };
+  //User.associate = function(models) {
+  //  User.hasMany(models.Post, {
+  //    onDelete: "cascade"
+  //  });
+  //};
   return User;
 };
