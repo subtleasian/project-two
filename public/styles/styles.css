@@ -50,6 +50,8 @@ div:not(:first-child) {
 	display: flex;
 	align-items: center;
 	position: relative;
+
+
 }
 
 #cover-caption {
@@ -60,6 +62,19 @@ div:not(:first-child) {
 
 /* only used for background overlay not needed for centering */
 form:before {
+	background: #ffd900;
+	content: '';
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+	z-index: -1;
+	border-radius: 10px;
+}
+
+.result-container:before {
 	background: #ffd900;
 	content: '';
 	height: 100%;

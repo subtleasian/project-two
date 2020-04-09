@@ -28,9 +28,9 @@ module.exports = function(app) {
       where: {
         id: req.params.id
       }
-    }).then(function(dbuser) {
+    }).then(function(dbMood) {
       res.render("moodResult", {
-        user: dbuser
+        user: dbMood
       });
     });
   });
@@ -41,9 +41,9 @@ module.exports = function(app) {
       where: {
         id: req.params.id
       }
-    }).then(function(dbuser) {
+    }).then(function(dbFriend) {
       res.render("friends", {
-        user: dbuser
+        user: dbFriend
       });
     });
   });
