@@ -15,10 +15,3 @@ module.exports = function(app) {
     });
   });
 };
-
-// When user creates account, generate ID with uuid
-// Send ID to database and store with user login details
-// Send ID to local storage (Logged in)
-// db.User.create & request.body
-// Send back ID with res.json (req.res.userId)
-// Remove ID from local storage (Logged out)

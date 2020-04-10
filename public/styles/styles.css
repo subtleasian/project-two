@@ -1,7 +1,5 @@
-.list-group-item {
-	line-height: 2.5;
-}
-@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css');
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&display=swap');
 
 html,
 body {
@@ -15,6 +13,13 @@ body {
 	font-size: 80%;
 	height: 100%;
 	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#cover {
+	background: #ffd900;
 }
 
 .center {
@@ -24,66 +29,75 @@ body {
 	width: 50%;
 }
 
-.container-fluid {
-	background: #ffd900;
-	font-size: 80%;
-	margin: 0;
-	position: absolute;
-	top: 50%;
-
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
-}
-
 div:not(:last-child) {
-	margin-top: 60px;
+	margin-top: 20;
 }
 
 div:not(:first-child) {
 	margin-top: 20px;
 }
 
-#cover {
-	background: #ffd900;
-	background-size: cover;
-	height: 100%;
-	text-align: left;
-	display: flex;
-	align-items: center;
-	position: relative;
-
-
-}
-
-#cover-caption {
-	width: 100%;
-	position: relative;
-	z-index: 1;
-}
-
 /* only used for background overlay not needed for centering */
-form:before {
-	background: #ffd900;
-	content: '';
-	height: 100%;
-	left: 0;
-	position: absolute;
-	top: 0;
-	width: 100%;
+.col-sm {
 	background-color: rgba(0, 0, 0, 0.3);
-	z-index: -1;
+	/* z-index: -1; */
 	border-radius: 10px;
 }
 
-.result-container:before {
-	background: #ffd900;
-	content: '';
-	height: 100%;
-	left: 0;
-	position: absolute;
-	top: 0;
-	width: 100%;
-	background-color: rgba(0, 0, 0, 0.3);
-	z-index: -1;
-	border-radius: 10px;
+#emoji {
+	max-width: 10%;
+	max-height: 10%;
+	display: block; /* remove extra space below image */
+}
+
+/* fonts */
+#homeTitle {
+	font-family: 'Barlow', sans-serif;
+	font-weight: 700;
+	letter-spacing: -2px;
+}
+
+#title {
+	font-family: 'Barlow', sans-serif;
+	font-weight: 600;
+	letter-spacing: -2px;
+}
+
+#subTitle {
+	font-family: 'Barlow', sans-serif;
+	font-size: 30px;
+	font-weight: 500;
+	letter-spacing: -1px;
+}
+
+#instruction {
+	color: #321457;
+}
+
+div {
+	font-family: 'Barlow', sans-serif;
+}
+
+label {
+	font-family: 'Barlow', sans-serif;
+	font-size: 13px;
+}
+
+footer {
+	color: #8064a2;
+}
+
+/* button properties */
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited {
+	background-color: #8064a2 !important;
+	border: none;
+}
+
+.btn:focus,
+.btn:active {
+	outline: none !important;
+	box-shadow: none;
 }
