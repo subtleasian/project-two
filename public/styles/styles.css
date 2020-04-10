@@ -1,7 +1,89 @@
 .list-group-item {
-  line-height: 2.5;
+	line-height: 2.5;
+}
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css');
+
+html,
+body {
+	background: #ffd900;
+	font-size: 80%;
+	height: 100%;
 }
 
-body {
-  background-color: aqua;
+#home {
+	background: #ffd900;
+	font-size: 80%;
+	height: 100%;
+	width: 100%;
+}
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+
+.container-fluid {
+	background: #ffd900;
+	font-size: 80%;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+div:not(:last-child) {
+	margin-top: 60px;
+}
+
+div:not(:first-child) {
+	margin-top: 20px;
+}
+
+#cover {
+	background: #ffd900;
+	background-size: cover;
+	height: 100%;
+	text-align: left;
+	display: flex;
+	align-items: center;
+	position: relative;
+
+
+}
+
+#cover-caption {
+	width: 100%;
+	position: relative;
+	z-index: 1;
+}
+
+/* only used for background overlay not needed for centering */
+form:before {
+	background: #ffd900;
+	content: '';
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+	z-index: -1;
+	border-radius: 10px;
+}
+
+.result-container:before {
+	background: #ffd900;
+	content: '';
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+	z-index: -1;
+	border-radius: 10px;
 }

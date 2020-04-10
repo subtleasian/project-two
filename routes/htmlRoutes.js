@@ -22,15 +22,28 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/survey.html"));
   });
 
-  // Load example page and pass in an example by id
+  // Load mood result page and pass in score data by id
+  app.get("/moodresult/:id", function(req, res) {
+    db.User.findOne({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbMood) {
+      res.render("moodResult", {
+        user: dbMood
+      });
+    });
+  });
+
+  // Load friend result page and pass in friend data by id
   app.get("/friends/:id", function(req, res) {
     db.User.findOne({
       where: {
         id: req.params.id
       }
-    }).then(function(dbuser) {
+    }).then(function(dbFriend) {
       res.render("friends", {
-        user: dbuser
+        user: dbFriend
       });
     });
   });

@@ -1,8 +1,6 @@
 var db = require("../models");
-var express = require("express");
-var app = express();
 
-module.exports = function(pp) {
+module.exports = function(app) {
   // Get all users
   app.get("/api/users", function(req, res) {
     db.User.findAll({}).then(function(dbUsers) {

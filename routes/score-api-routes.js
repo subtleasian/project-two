@@ -17,7 +17,11 @@ module.exports = function(app) {
 
   // Delete an Score by id
   app.delete("/api/scores/:id", function(req, res) {
-    db.Score.destroy({ where: { id: req.params.id } }).then(function(dbScores) {
+    db.Score.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbScores) {
       res.json(dbScores);
     });
   });
