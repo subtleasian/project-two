@@ -27,6 +27,13 @@ module.exports = function(sequelize, DataTypes) {
       validate: {
         len: [1, 255]
       }
+    },
+    userId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        len: [1, 255]
+      }
     }
   });
 

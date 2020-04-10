@@ -4,7 +4,7 @@ module.exports = function(app) {
   // Get all examples
   app.get("/api/scores", function(req, res) {
     db.Score.findAll({}).then(function(dbScores) {
-      res.json(dbscores);
+      res.json(dbScores);
     });
   });
 
@@ -15,7 +15,7 @@ module.exports = function(app) {
     });
   });
 
-  // Delete an Score by id
+  // Delete a Score by id
   app.delete("/api/scores/:id", function(req, res) {
     db.Score.destroy({
       where: {

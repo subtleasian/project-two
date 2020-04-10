@@ -18,7 +18,8 @@ module.exports = function(app) {
   });
 
   //survey page
-  app.get("/survey", function(req, res) {
+  app.get("/survey/:id", function(req, res) {
+    var id = req.params.id;
     res.sendFile(path.join(__dirname, "../public/survey.html"));
   });
 

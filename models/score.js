@@ -28,7 +28,7 @@ module.exports = function(sequelize, DataTypes) {
     // A Score can't be created without an User due to the foreign key constraint
     Score.belongsTo(models.User, {
       foreignKey: {
-        allowNull: false
+        allowNull: true
       }
     });
   };

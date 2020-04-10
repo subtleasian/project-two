@@ -1,79 +1,44 @@
 $(document).ready(function() {
   $("#submit").click(function() {
     event.preventDefault();
-    // Integer variable to add negative points
-    var negPoints = 0;
-    var posPoints = 0;
 
-    // Function that counts number of negative checked boxes
-    function countCheckedNeg() {
-      var anyBoxesChecked = false;
-      $("#negative" + ' input[type="checkbox"]').each(function() {
-        if ($(this).is(":checked")) {
-          anyBoxesChecked = true;
-          negPoints += negPoints;
-        }
+    var moodScore = 0;
+    var pleasantScore = 0;
+    var unpleasantScore = 0;
+    var negativeArr = [];
+    var positiveArr = [];
+
+    // Example: [1, 1] = Length of 2 = 2 Checked boxes = 2 Points
+    // [1, 1, 1] = Length of 3 = 3 Checked boxes = 3 Points
+
+    //if box is checked, then push the emotion to the array
+    $.each($("input[name='positive']:checked"), function() {
+      positiveArr.push($(this).val());
+    });
+
+    $.each($("input[name='negative']:checked"), function() {
+      negativeArr.push($(this).val());
+    });
+
+    pleasantScore = positiveArr.length;
+    unpleasantScore = negativeArr.length;
+    moodScore = pleasantScore - unpleasantScore;
+
+    console.log(pleasantScore, unpleasantScore, moodScore);
+
+    postMood({
+      UnpleasantScore: unpleasantScore,
+      PleasantScore: pleasantScore,
+      OverallEmotionScore: moodScore
+    });
+
+    function postMood(scores) {
+      $.post("/api/scores", scores, function() {
+        console.log("Mood scores have been added.");
       });
-      console.log(negPoints);
-    }
 
-    countCheckedNeg();
-    // // Negative Emotions
-    // senseOfLossInput
-    // ashamedInput
-    // badInput
-    // despicableInput
-    // disappointedInput
-    // discouragedInput
-    // dissatisfiedInput
-    // guiltyInput
-    // powerlessInput
-    // sulkyInput
+      //redirect to results page with id
 
-    // //  Positive Emotions
-    // boldInput
-    // braveInput
-    // confidentInput
-    // determinedInput
-    // eagerInput
-    // enthusiasticInput
-    // hopefulInput
-    // inspiredInput
-    // optimisticInput
-    // reenforcedInput
-    if ($("#boldInput").is(":checked")) {
-      posPoints += 1;
-    };
-    if ($("#braveInput").is(":checked")) {
-      posPoints += 1;
-    };
-    if ($("#confidentInput").is(":checked")) {
-      posPoints += 1;
-    };
-    if ($("#determinedInput").is(":checked")) {
-      posPoints += 1;
-    };
-    if ($("#eagerInput").is(":checked")) {
-      posPoints += 1;
-    };
-    if ($("#enthusiasticInput").is(":checked")) {
-      posPoints += 1;
-    };
-    if ($("#hopefulInput").is(":checked")) {
-      posPoints += 1;
-    };
-    if ($("#inspiredInput").is(":checked")) {
-      posPoints += 1;
-    };
-    if ($("#optimisticInput").is(":checked")) {
-      posPoints += 1;
-    };
-    if ($("#reenforcedInput").is(":checked")) {
-      posPoints += 1;
     }
   });
-
-  // Integer type variable to add positive points
-
-  // Final mood point calculater (positive - negative)
 });

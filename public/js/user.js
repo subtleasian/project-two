@@ -1,3 +1,5 @@
+var mysql = require("mysql");
+
 $(document).ready(function() {
   // Getting jQuery references to the post body, title, form, and author select
   var profileInput = $("#inputProfile");
@@ -32,9 +34,19 @@ $(document).ready(function() {
 
   // Submits a new post and brings user to survey page upon completion
   function submitUser(post) {
+    //creates new user data in User database
     $.post("/api/users", post, function() {
       console.log("new user account created.");
-      window.location.href = "/survey";
+    });
+    //ajax function to get user ID from database
+    var query = connection.query("SELECT * FROM Users", function(err, res) {
+      if (err) throw err;
+      var userId = res.id;
+
+      //redirect the page to /survey/:id
+      location.replace(
+        window.location.href.replace("/api/users", "/survey/" + userId)
+      );
     });
   }
 });
