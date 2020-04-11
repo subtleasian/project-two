@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 $(document).ready(function () {
   // Getting jQuery references to the post body, title, form, and author select
   var profileInput = $("#inputProfile");
@@ -60,6 +61,7 @@ $(document).ready(function () {
 
     displayScore();
     getFriends();
+    
   }
 
   // Submits a new post and brings user to survey page upon completion
@@ -120,29 +122,111 @@ $(document).ready(function () {
   //get friend data from user databas
   function getFriends() {
     $.get("/api/users", function (dbUser) {
-      for (let j = 0; j < dbUser.length; j++) {
+      for (var j = 0; j < dbUser.length; j++) {
         friendArr.push(dbUser[j]);
         console.log(dbUser[j]);
-        
       }
       for (var i = 0; i < friendArr.length; i++) {
-
         var scoreDiff = moodScore - friendArr[i].OverallEmotionScore;
         var totalDiff = 1000;
-        var totalOppositeDiff = -1000;
-        
+        var totalOppositeDiff = 0;
+        var oppositeScoreDiff = moodScore - friendArr[i].OverallEmotionScore;
+
         if (scoreDiff < totalDiff) {
-          totalDiff = scoreDiff
+          totalDiff = scoreDiff;
           moodyFriendname = friendArr[i].name;
         }
-        if (scoreDiff > totalOppositeDiff) {
-          totalOppositeDiff = scoreDiff
+        if (oppositeScoreDiff > totalOppositeDiff) {
+          totalOppositeDiff = oppositeScoreDiff;
           oppositeMoodyFriendname = friendArr[i].name;
         }
       }
       console.log(friendArr);
-      console.log(moodyFriendname);
-      console.log(oppositeMoodyFriendname);
+      console.log("closest score: " + totalDiff);
+      console.log("moody friend: " + moodyFriendname);
+      console.log("furthest score: " + totalOppositeDiff);
+      console.log("opposite moody friend: " + oppositeMoodyFriendname);
+      displayFriends();
     });
+
+  }
+
+  function displayFriends() {
+    var newFriendHeader = $(
+      "<h5 class='display-4 py-2 text-truncate' id='subTitle'>" +
+      moodyFriendname +
+      "</h5>"
+    );
+
+    var oppFriendHeader =
+      $(
+        "<h5 class='display-4 py-2 text-truncate' id='subTitle'>" +
+        moodyFriendname + " is feeling the opposite!" +
+        "</h5>"
+      );
+
+    $("#friend-name").html(newFriendHeader);
+
+    if (moodScore <= -4) {
+      var friendImg = $(
+        "<img class='center' id='friendImg' src='/assets/images/friend_1.png'>" +
+        "<br>"
+      );
+      var oppFriendImg = $(
+        "<img class='center' id='friendImg' src='/assets/images/friend_4.png'>" +
+        "<br>"
+      );
+      $("#friend-name").append(friendImg);
+      $("#friend-name").append(oppFriendHeader);
+      $("#friend-name").append(oppFriendImg);
+    } else if (moodScore <= -2 && moodScore > -4) {
+      var friendImg = $(
+        "<img class='center' id='friendImg' src='/assets/images/friend_1.png'>" +
+        "<br>"
+      );
+      var oppFriendImg = $(
+        "<img class='center' id='friendImg' src='/assets/images/friend_4.png'>" +
+        "<br>"
+      );
+      $("#friend-name").append(friendImg);
+      $("#friend-name").append(oppFriendHeader);
+      $("#friend-name").append(oppFriendImg);
+    } else if (moodScore <= 2 && moodScore > -2) {
+      var friendImg = $(
+        "<img class='center' id='friendImg' src='/assets/images/friend_2.png'>" +
+        "<br>"
+      );
+      var oppFriendImg = $(
+        "<img class='center' id='friendImg' src='/assets/images/friend_3.png'>" +
+        "<br>"
+      );
+      $("#friend-name").append(friendImg);
+      $("#friend-name").append(oppFriendHeader);
+      $("#friend-name").append(oppFriendImg);
+    } else if (moodScore <= 4 && moodScore > 2) {
+      var friendImg = $(
+        "<img class='center' id='friendImg' src='/assets/images/friend_3.png'>" +
+        "<br>"
+      );
+      var oppFriendImg = $(
+        "<img class='center' id='friendImg' src='/assets/images/friend_2.png'>" +
+        "<br>"
+      );
+      $("#friend-name").append(friendImg);
+      $("#friend-name").append(oppFriendHeader);
+      $("#friend-name").append(oppFriendImg);
+    } else if (moodScore > 4) {
+      var friendImg = $(
+        "<img class='center' id='friendImg' src='/assets/images/friend_4.png'>" +
+        "<br>"
+      );
+      var oppFriendImg = $(
+        "<img class='center' id='friendImg' src='/assets/images/friend_1.png'>" +
+        "<br>"
+      );
+      $("#friend-name").append(friendImg);
+      $("#friend-name").append(oppFriendHeader);
+      $("#friend-name").append(oppFriendImg);
+    }
   }
 });
