@@ -1,0 +1,221 @@
+  <!--Form to take in profile picture, name, email, password-->
+  <section id="cover" class="min-vh-100">
+    <div id="cover-caption">
+      <div class="container-fluid">
+        <div class="row text-white">
+          <div class="col-xl-5 col-lg-4 col-md-6 col-sm-10 mx-auto text-center form p-4">
+            <div class="px-2">
+              <!-- form starts -->
+              <form class="justify-content-center" id="user-form">
+                <!-- User info -->
+                <div class="col-sm">
+                  <br>
+                  <img class="center" src="/assets/images/love.svg" height="60" width="60">
+                  <h1 class="display-4 py-2 text-truncate" id="title">New User</h1>
+                  <div class="form-group">
+                    <!-- Profile Picture -->
+                    <label for="inputProfile">Choose a Profile Picture</label>
+                    <input type="file" class="form-control-file" id="inputProfile">
+                  </div>
+                  <!-- Name -->
+                  <div class="form-group">
+                    <label for="inputName">Full Name</label>
+                    <textarea class="form-control" id="inputName" rows="1" placeholder="Enter name"></textarea>
+                  </div>
+                  <!-- Email -->
+                  <div class="form-group">
+                    <label for="inputEmail">Email address</label>
+                    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp"
+                      placeholder="Enter email">
+                  </div>
+                  <!-- Password -->
+                  <div class="form-group">
+                    <label for="inputPassword">Password</label>
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                    <small id="passwordHelp" class="form-text text-muted">We'll never share your password with
+                      anyone
+                      else</small>
+                  </div>
+                  <br>
+                </div>
+
+                <!-- survey -->
+                <div class="col-sm">
+                  <br>
+                  <img class="center" src="/assets/images/08.png">
+                  <h1 class="display-4 py-2 text-truncate" id="title">Mood Survey</h1>
+                  <!-- Negative Emotions-->
+                  <div class>
+                    <h5>Negative</h5>
+                    <div class="form-check" id="negative">
+                      <input class="form-check-input" type="checkbox" name="negative" value="Sense of Loss"
+                        id="senseOfLossInput">
+                      <label class="form-check-label" for="senseOfLossInput">
+                        Sense of Loss
+                      </label>
+                      <br>
+                      <input class="form-check-input" type="checkbox" name="negative" value="Ashamed" id="ashamedInput">
+                      <label class="form-check-label" for="ashamedInput">
+                        Ashamed
+                      </label>
+                      <br>
+                      <input class="form-check-input" type="checkbox" name="negative" value="Bad" id="badInput">
+                      <label class="form-check-label" for="badInput">
+                        Bad
+                      </label>
+                      <br>
+                      <input class="form-check-input" type="checkbox" name="negative" value="Despicable"
+                        id="despicableInput">
+                      <label class="form-check-label" for="despicableInput">
+                        Despicable
+                      </label>
+                      <br>
+                      <input class="form-check-input" type="checkbox" name="negative" value="Disappointed"
+                        id="disappointedInput">
+                      <label class="form-check-label" for="disappointedInput">
+                        Disappointed
+                      </label>
+                      <br>
+                      <input class="form-check-input" type="checkbox" name="negative" value="Discouraged"
+                        id="discouragedInput">
+                      <label class="form-check-label" for="discouragedInput">
+                        Discouraged
+                      </label>
+                      <br>
+                      <input class="form-check-input" type="checkbox" name="negative" value="Dissatisfied"
+                        id="dissatisfiedInput">
+                      <label class="form-check-label" for="dissatisfiedInput">
+                        Dissatisfied
+                      </label>
+                      <br>
+                      <input class="form-check-input" type="checkbox" name="negative" value="Guilty" id="guiltyInput">
+                      <label class="form-check-label" for="guiltyInput">
+                        Guilty
+                      </label>
+                      <br>
+                      <input class="form-check-input" type="checkbox" name="negative" value="Powerless"
+                        id="powerlessInput">
+                      <label class="form-check-label" for="powerlessInput">
+                        Powerless
+                      </label>
+                      <br>
+                      <input class="form-check-input" type="checkbox" name="negative" value="Sulky" id="sulkyInput">
+                      <label class="form-check-label" for="sulkyInput">
+                        Sulky
+                      </label>
+                      <br>
+                    </div>
+                  </div>
+                  <br>
+                  <!-- Positive Emotions -->
+                  <div class>
+                    <h5>Positive</h5>
+                    <div class="form-check" id="positive">
+                      <input class="form-check-input" type="checkbox" name="positive" value="Bold" id="boldInput">
+                      <label class="form-check-label" for="boldInput">
+                        Bold
+                      </label>
+                      <br>
+                      <input class="form-check-input" type="checkbox" name="positive" value="Brave" id="braveInput">
+                      <label class="form-check-label" for="braveInput">
+                        Brave
+                      </label>
+                      <br>
+                      <input class="form-check-input" type="checkbox" name="positive" value="Confident"
+                        id="confidentInput">
+                      <label class="form-check-label" for="confidentInput">
+                        Confident
+                      </label>
+                      <br>
+                      <input class="form-check-input" type="checkbox" name="positive" value="Determined"
+                        id="determinedInput">
+                      <label class="form-check-label" for="determinedInput">
+                        Determined
+                      </label>
+                      <br>
+                      <input class="form-check-input" type="checkbox" name="positive" value="Eager" id="eagerInput">
+                      <label class="form-check-label" for="eagerInput">
+                        Eager
+                      </label>
+                      <br>
+                      <input class="form-check-input" type="checkbox" name="positive" value="Enthusiastic"
+                        id="enthusiasticInput">
+                      <label class="form-check-label" for="enthusiasticInput">
+                        Enthusiastic
+                      </label>
+                      <br>
+                      <input class="form-check-input" type="checkbox" name="positive" value="Hopeful" id="hopefulInput">
+                      <label class="form-check-label" for="hopefulInput">
+                        Hopeful
+                      </label>
+                      <br>
+                      <input class="form-check-input" type="checkbox" name="positive" value="Inspired"
+                        id="inspiredInput">
+                      <label class="form-check-label" for="inspiredInput">
+                        Inspired
+                      </label>
+                      <br>
+                      <input class="form-check-input" type="checkbox" name="positive" value="Optimistic"
+                        id="optimisticInput">
+                      <label class="form-check-label" for="optimisticInput">
+                        Optimistic
+                      </label>
+                      <br>
+                      <input class="form-check-input" type="checkbox" name="positive" value="Re-enforced"
+                        id="reenforcedInput">
+                      <label class="form-check-label" for="reenforcedInput">
+                        Re-Enforced
+                      </label>
+                      <br>
+                      <br>
+                      <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+                      <br>
+                      <br>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <!--Result section-->
+              <div class="result-container">
+                <div class="col-sm">
+                  <h1 class="display-4 py-2 text-truncate" id="title">Mood Result</h1>
+                  <!-- dynamic display -->
+                  <div id="display-score">
+                    <p id="instruction">Submit your survey to see your mood!</p>
+                  </div>
+                  <br>
+                </div>
+                <div class="col-sm">
+                  <h1 class="display-4 py-2 text-truncate" id="title">Your Moody Friends</h1>
+                  <div id="friend-name">
+                    <p id="instruction">Submit your survey to see your moody friends!</p>
+                  </div>
+                  <br>
+                </div>
+              </div>
+              <br>
+              <!--End of result section-->
+              <div class="text-center">
+                <a href="/user"><button class="btn btn-primary">Survey Again</button></a>
+                <a href="/"><button class="btn btn-primary">Log Out</button></a>
+              </div>
+              <br>
+              <!-- footer -->
+              <footer>
+                <p>DMJ designs | all rights reserved 2020</p>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+  <br>
+
+
+  <!-- javascript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/js/user.js" type="text/javascript"></script>

@@ -27,13 +27,28 @@ module.exports = function(sequelize, DataTypes) {
       validate: {
         len: [1, 255]
       }
+    },
+    UnpleasantScore: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
+    },
+    PleasantScore: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        len: [1, 255]
+      }
+    },
+    OverallEmotionScore: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        len: [1, 255]
+      }
     }
   });
-
-  User.associate = function(models) {
-    User.hasMany(models.Score, {
-      onDelete: "cascade"
-    });
-  };
   return User;
 };
