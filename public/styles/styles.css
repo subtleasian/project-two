@@ -75,6 +75,11 @@ div:not(:first-child) {
 	color: #321457;
 }
 
+.friend {
+	color: #8064a2;
+	font-weight: 600;
+}
+
 div {
 	font-family: 'Barlow', sans-serif;
 }
