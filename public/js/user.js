@@ -153,7 +153,7 @@ $(document).ready(function () {
 
   function displayFriends() {
     var newFriendHeader = $(
-      "<h5 class='display-4 py-2 text-truncate' id='subTitle'>" +
+      "<h5 class='display-4 py-2 text-truncate' style='font-size:10vw;' id='subTitle'>" +
       moodyFriendname +
       "</h5>"
     );

@@ -102,3 +102,9 @@ footer {
 	outline: none !important;
 	box-shadow: none;
 }
+
+@media screen and (max-width: 1200px) {
+	#title, #subTitle {
+	  font-size: 30px;
+	}
+  }
