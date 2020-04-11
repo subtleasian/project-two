@@ -123,7 +123,7 @@ $(document).ready(function() {
         friendArr.push(dbUser[j]);
         // console.log(dbUser[j]);
       }
-      for (var i = 0; i < friendArr.length; i++) {
+      for (var i = 0; i < friendArr.length - 1; i++) {
         var scoreDiff = moodScore - friendArr[i].OverallEmotionScore;
         var totalDiff = 20;
         var oppositeScoreDiff = moodScore - friendArr[i].OverallEmotionScore;
@@ -133,7 +133,7 @@ $(document).ready(function() {
           moodyFriendname = friendArr[i].name;
         }
       }
-      for (var k = 0; k < friendArr.length; k++) {
+      for (var k = 0; k < friendArr.length - 1; k++) {
         var oppositeScoreDiff = moodScore - friendArr[k].OverallEmotionScore;
         if (oppositeScoreDiff > totalDiff) {
           totalDiff = oppositeScoreDiff;
