@@ -121,7 +121,7 @@ $(document).ready(function() {
     $.get("/api/users", function(dbUser) {
       for (var j = 0; j < dbUser.length; j++) {
         friendArr.push(dbUser[j]);
-        console.log(dbUser[j]);
+        // console.log(dbUser[j]);
       }
       for (var i = 0; i < friendArr.length; i++) {
         var scoreDiff = moodScore - friendArr[i].OverallEmotionScore;
@@ -140,11 +140,11 @@ $(document).ready(function() {
           oppositeMoodyFriendname = friendArr[k].name;
         }
       }
-      console.log(friendArr);
-      console.log("closest score: " + totalDiff);
-      console.log("moody friend: " + moodyFriendname);
-      console.log("furthest score: " + oppositeScoreDiff);
-      console.log("opposite moody friend: " + oppositeMoodyFriendname);
+      // console.log(friendArr);
+      // console.log("closest score: " + totalDiff);
+      // console.log("moody friend: " + moodyFriendname);
+      // console.log("furthest score: " + oppositeScoreDiff);
+      // console.log("opposite moody friend: " + oppositeMoodyFriendname);
       displayFriends();
     });
   }
@@ -170,7 +170,9 @@ $(document).ready(function() {
     );
 
     var chatButtonOne = $(
-      "<br>" + "<button class='btn btn-primary'>Send a Message</button>" + "<br>"
+      "<br>" +
+        "<button class='btn btn-primary'>Send a Message</button>" +
+        "<br>"
     );
 
     var chatButton = $(
@@ -200,7 +202,8 @@ $(document).ready(function() {
       );
       var oppFriendImg = $(
         "<img class='center' id='friendImg' src='/assets/images/friend_4.png'>" +
-          "<br>" + "<br>"
+          "<br>" +
+          "<br>"
       );
       $("#friend-name").append(friendImg);
       $("#friend-name").append(chatButtonOne);
